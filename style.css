@@ -11,16 +11,15 @@
 }
 
 body {
-  --bg-color: #e4def7;
-  --bg-color-1: rgb(246, 232, 232);
-  --bg-color-2: #f4f1fc;
-  --bg-color-3: white;
+  --bg-color: #000000;
+  --bg-color-1: rgb(141, 141, 141);
+  --bg-color-2: #04a7aaa8;
+  --bg-color-3: rgb(0, 0, 0);
   --bg-color-transparent: rgba(255, 255, 255, 0.464);
-  --heading-color: hsl(var(--hue-1), 61%, 24%);
-  --text-color: hsl(var(--hue-1), 17%, 63%);
+  --heading-color:#C2E88D;
+  --text-color: #92ba5a;
 }
 /* --------------- General Styles --------------- */
-
 *,
 *::before,
 *::after {
@@ -217,7 +216,6 @@ ul {
 
 .triangle {
   width: 95px;
-  opacity: 0.18;
 }
 
 .dots {
@@ -241,7 +239,7 @@ header {
 }
 
 header.scrolled {
-  background-color: var(--bg-color-transparent);
+  background-color: #4d6a2577;
   box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -304,13 +302,13 @@ header.scrolled .logo {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--heading-color);
+  color: rgb(102, 203, 237);
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
-  opacity: 0.2;
+  opacity: 0.3;
 }
 
 .hamburger {
@@ -994,7 +992,7 @@ textarea.form-input {
 /* --------------- Footer Styling --------------- */
 
 footer {
-  background-color: #F4EFFF;
+  background-color: #000000;
   padding: 4rem 0;
 }
 
@@ -1015,7 +1013,7 @@ footer .social-media {
   border-radius: 50%;
   margin-left: 1rem;
   background-color: var(--bg-color-1);
-  color: var(--text-color);
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;

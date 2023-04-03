@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Economica&family=Lobster&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Dougnuts</title>
+</head>
+<body>
+  <!-- Top navigation -->
+  <div class="animate__animated animate__slideInLeft animate__delay-2s">
+    <div class="topnav">
+    <!-- Centered link -->
+      <div class="topnav-centered">
+        <a href="home.html"><img src="assets/logo.jpg" alt="logo"></a>
+    </div>
+    <!-- Left-aligned links (default) -->
+    <a href="aboutus.html">About Us</a>
+    <a href="donuts.html" class="active">Donuts</a>
+    <!-- Right-aligned links -->
+    <div class="topnav-right">
+      <a href="wholesale.html">Wholease</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+</div>
+</div>
+</div>
+
+<!--Hero container-->
+<!--Animation class importer from Animate library-->
+<div class="animate__animated animate__slideInUp animate__delay-2s">
+  <!--Image container with text-->  
+  <div class="container" style="padding-top: 150px;">
+      <div class="centered">
+        <h1>Find our extensive range below </h1>
+        </div>
+      </div>
+    <!--End of hero container -->
+
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('cakes')"> Cakes</button>
+      <button class="btn" onclick="filterSelection('donuts')"> Donuts</button>
+      <button class="btn" onclick="filterSelection('cookies')"> Cookies</button>
+    </div>
+
+    <!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column cakes">
+    <div class="content">
+      <img src="assets/cake1.jpg" alt="Cake" style="width:100%">
+      <h4>Strawberry cake</h4>
+      <p>Our ledishious Strawberrycake</p>
+    </div>
+  </div>
+  <div class="column cookies">
+    <div class="content">
+    <img src="assets/cookie1.jpg" alt="Cookie" style="width:100%">
+      <h4>Our biscoff cookie</h4>
+      <p>Come here and try our delishious biscoff cookie</p>
+    </div>
+  </div>
+  <div class="column cookies">
+    <div class="content">
+    <img src="assets/cookie2.jpg" alt="Cookie" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cookies">
+    <div class="content">
+    <img src="assets/cookies3.jpg" alt="Cookie" style="width:100%">
+      <h4>Coffee infused cookies</h4>
+      <p>Check out our coffee infused cookies</p>
+    </div>
+  </div>
+  <div class="column donuts">
+    <div class="content">
+    <img src="assets/donut1.jpg" alt="Donut" style="width:100%">
+      <h4>Caramel Donut</h4>
+      <p>Taste our soft caramel stuffed donut</p>
+    </div>
+  </div>
+  <div class="column donuts">
+    <div class="content">
+    <img src="assets/donut2.jpg" alt="Donut" style="width:100%">
+      <h4>Strawberry jam</h4>
+      <p>Strawberry jam and donut dough for ever</p>
+    </div>
+  </div>
+  <div class="column donuts">
+    <div class="content">
+    <img src="assets/donut3.jpg" alt="Donut" style="width:100%">
+      <h4>Bueno donut</h4>
+      <p>Check out our bueni filled donuts</p>
+    </div>
+  </div>
+  <div class="column donuts">
+    <div class="content">
+    <img src="assets/donut4.jpg" alt="Donut" style="width:100%">
+      <h4>Lemon filled donuts</h4>
+      <p>Try our lemon filled donuts</p>
+    </div>
+  </div>
+  <div class="column donuts">
+    <div class="content">
+    <img src="assets/donut5.jpg" alt="Donut" style="width:100%">
+      <h4>Red vevlet donut</h4>
+      <p>You just need to try it</p>
+    </div>
+  </div>
+  <div class="column donuts">
+    <div class="content">
+    <img src="assets/donut6.jpg" alt="Donut" style="width:100%">
+      <h4>Nutella and biscuit filled donuts</h4>
+      <p>They are simply delishious</p>
+    </div>
+  </div>
+  <div class="column donuts">
+    <div class="content">
+      <img src="assets/donut7.jpg" alt="Donut" style="width:100%">
+      <h4>Tiramisou donut</h4>
+      <p>It is fantastic</p>
+    </div>
+  </div>
+  <div class="column donuts">
+    <div class="content">
+    <img src="assets/donut8.jpg" alt="Donut" style="width:100%">
+      <h4>White chocholate donuts</h4>
+      <p>They are fabulus</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+<!-- END MAIN -->
+</div>
+<script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+        <!--Footer-->
+        <div class="footer-container">
+          <div class="footer">
+           <div class="footer-heading footer-1">
+            <h2>Stores</h2>
+            <a style=padding:10px href="contactus.html">Manchester Store &#x1F4DE; 012345678<span style="color: black;">&#x27A4;</span> Street 1, Venue 2, M1234 </a>
+            <a style=padding:10px href="contactus.html">Stockport Store &#x1F4DE; 910111212<span style="color: black;">&#x27A4;</span> Street 3, Venue 4, S1234 </a>
+            <a style=padding:10px href="contactus.html">Bolton Store &#x1F4DE; 131416181<span style="color: black;">&#x27A4;</span> Street 5, Venue 6, B1234 </a>
+            <a style=padding:10px href="contactus.html">Bury Store &#x1F4DE; 19202122<span style="color: black;">&#x27A4;</span> Street 7, Venue 8, B5678 </a>
+           </div>
+           <div class="footer-heading footer-2">
+            <h2>About Us</h2>
+            <a href="aboutus.html">Our Story</a>
+           </div>
+           <div class="footer-heading footer-3">
+            <h2>Social Media</h2>
+            <a href="contactus.html">
+              <img src="assets/instagram.png" alt="instagram">
+              <img src="assets/mail.png" alt="mail">
+              <img src="assets/facebook.png" alt="facebook">
+            </a>
+           </div>
+           <div class="footer-heading footer-4 ">
+            <h2>Dougnuts</h2>
+            <a href="home.html"><img src="assets/logowhite.png" style="width: 100%;"></a>
+           </div>
+        </div>
+      </div>
+    </div>
+    <!--End of footer-->
+</body>
+</html>

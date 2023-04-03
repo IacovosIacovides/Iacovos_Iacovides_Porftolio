@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="Player_style.css"> <!-- this will read from the CSS file for the player webpage-->
+  <script src="Player_script.js" defer></script> <!-- this will link this code to the JS file for the playert webpage-->
+  
+  <!--link to the icon of the page -->
+  <link rel = "icon" href = "tictac.jpg" 
+		  type = "image/x-icon">
+  <!--end of icon section-->
+  <title>Tic Tac Toe Game</title>
+  
+</head>
+
+<body>
+  <!-- audio for the webpage where the user can choose to play or not-->
+  <h2>Play sound</h2>
+  <audio controls loop>
+    <source src="player.mp3" loop="loop" type="audio/mpeg"/>
+  </audio>
+  <!--end of sound section-->
+
+  <h1>&#128526;GOOD LUCK&#128526;</h1> <!-- Title in h1 format along with an emoji-->
+  <table id="scoreboard" align ="center">
+
+    <!-- Players -->
+    <tr>
+      <td> Player 1 </td>
+      <td width="30"> &nbsp; </td>
+      <td> Player 2 </td>
+    </tr>
+    <!-- End of players -->
+    
+    <!-- Score of player 1 -->
+    <tr>
+      <td class="score" id="player1">
+        0 
+      </td>
+      <!-- End of score -->
+      <td> &nbsp; </td>
+      <!-- Score of player 2 -->
+      <td class="score" id="player2">
+        0 
+      </td>
+      <!-- End of score -->
+    </tr>
+  </table>
+  
+  
+  <div id="placeholder"></div>
+  
+  <!-- Code for the "REPLAY" button -->
+  <button onclick="restart()" style="color:black;">
+    Replay
+  </button>
+  <!-- End of "REPLAY" button -->
+
+  <!-- Code for the "BACK" button -->
+  <button>
+    <a href="HomePage_Index.html" style="color:black;">
+    Back
+  </a>
+  </button>
+  <!-- End of "BACK" button -->
+  </select>
+
+</body>
+</html>

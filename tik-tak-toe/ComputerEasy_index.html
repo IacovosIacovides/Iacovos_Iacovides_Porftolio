@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe Game</title>
+  	<!--link to the icon of the page -->
+  	<link rel = "icon" href = "tictac.jpg" 
+		  type = "image/x-icon">
+	<!--end of icon section-->
+  <link rel="stylesheet" href="ComputerEasy_style.css"> <!-- this will read from the CSS file for the easy level webpage-->
+</head>
+
+<body>
+	<!-- audio for the webpage where the user can choose to play or not-->
+	<h2>Play sound</h2>
+	<audio controls loop>
+	  <source src="easylevel.mp3" loop="loop" type="audio/mpeg"/>
+	</audio>
+	<!--end of sound section-->
+	<h1>&#128526;GOOD LUCK&#128526;</h1> <!-- Title in h1 format along with emoji-->
+  <h2> IT IS YOU VS THE COMPUTER</h2> <!-- Sub-title in h2 format -->
+  <h3>Easy Level &#128515;</h3> <!-- Heading in h3 format along with emoji-->
+
+	<!-- table game -->
+	<table>
+		<tr>
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="3"></td>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+			<td class="cell" id="8"></td>
+		</tr>
+	</table>
+	<!-- End of table game -->
+
+
+	<div class="endgame">
+		<div class="text"></div>
+	</div>
+
+	<!-- Code for the "REPLAY" button -->
+	<button onClick="startGame()">
+    <a>Replay</a>
+  </button>
+  <!-- End of "REPLAY" button -->
+
+  <!-- Code for the "BACK" button -->
+  <button>
+    <a href="HomePage_Index.html" style="color:black;">
+    Back
+  </a>
+  </button>
+  <!-- End of "BACK" button -->
+
+  <script src="ComputerEasy_script.js" style="color:black;"></script> <!-- Link to the js file of computer's hard level page-->
+</body>
+</html>

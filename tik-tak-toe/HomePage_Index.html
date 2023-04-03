@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--icon link -->
+  <link rel = "icon" href = "tictac.jpg" 
+		  type = "image/x-icon">
+  <link rel="stylesheet" href="HomePage_Styles.css"> <!-- Lthis will read from the CSS file for the home webpage-->
+  <title>Tic Tac Toe Game</title>
+</head>
+
+<body>
+  <!-- audio for the webpage where the user can choose to play or not-->
+  <h2>Play sound</h2>
+  <audio controls loop>
+    <source src="Homepage.mp3" loop="loop" type="audio/mpeg"/>
+  </audio>
+  <!--end of sound section-->
+  <h1>Welcome!!&#128075;</h1> <!-- Title in h1 format -->
+  <h2>Tic Tac Toe Game</h2> <!-- Sub-title in h2 format -->
+  <p>Select what game you want to play from below and get on it!
+    And as always... GOOD LUCK PLAYER&#128079;</p>
+   <!-- Heading in "p" format -->
+  
+  
+  <div id="placeholder"></div>
+  
+<!-- Multiplayer button -->
+ <button type="button"> 
+    <a href="Player_index.html" style="color:black;">
+        Play with a friend
+    </a>
+ </button>
+ <!-- End of multiplayer's button -->
+
+ <!-- Computer Easy Level button -->
+ <button type="button">
+    <a href="ComputerEasy_index.html " style="color:black;">
+        Play with the computer - - Easy
+    </a>
+ </button>
+  <!-- End of computer's easy level button -->
+
+ <!-- Computer hard level button -->
+ <button type="button">
+  <a href="ComputerHard_index.html" style="color:black;">
+      Play with the computer - - Hard
+  </a>
+</button>
+ <!-- End of computer's hard level button -->
+
+<img src="tictac.jpg" alt="image"> <!-- Tic-tac-toe image -->
+
+  
+  </select>
+  <script>
+    //Button click sound
+const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    audio.play();
+  });
+});
+//End of button click sound
+  </script>
+</body>
+</html>

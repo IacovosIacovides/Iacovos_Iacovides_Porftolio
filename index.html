@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel = "icon" href ="assets/me3.jpg" type = "image/x-icon">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,93 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" href="./css/style.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    /* Portfolio Header Flex Alignment */
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.filter-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.filter-btn {
+  background: transparent;
+  border: 2px solid var(--main-color-1);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: var(--heading-color);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--main-color-1);
+  color: #fff;
+}
+
+/* Portfolio Gallery Grid */
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.prt-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.prt-card:hover {
+  transform: translateY(-5px);
+}
+.prt-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s;
+}
+.prt-card:hover .prt-image img {
+  transform: scale(1.05);
+}
+
+/* Overlay on Hover */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+.prt-card:hover .overlay {
+  opacity: 1;
+}
+.overlay-content {
+  text-align: center;
+  color: #fff;
+}
+.overlay-content h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.link-btn {
+  background: var(--main-color-2);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 500;
+}
+
+  </style>
 </head>
 <body>
   <div class="overlay"></div>
@@ -53,12 +141,12 @@
           <p class="text">//  I am a Front End Web Developer</p>
           <div class="cta">
             <a href="mailto:iaiacovidesg@gmail.com" class="btn">Contact me</a>
-            <a href="#" onclick='window.open("./assets/Iacovos Iacovides. CV.pdf");return false;'download class="btn secondary-btn"><span style="color: white;">Download my CV</span></a>
+            <a href="#" onclick='window.open("./assets/IacovosIacovidesCV_2024.pdf");return false;'download class="btn secondary-btn"><span style="color: white;">Download my CV</span></a>
             <a href="#" onclick='window.open("./tik-tak-toe/HomePage_Index.html");return false;' class="btn">Kill you boredom and play some Tik-Tak-Toe!</a>
           </div>
         </div>
         <div>
-          <img src="./assets/m3.jpg" style="border-radius: 30px;"alt="Iacovos's face">
+          <img src="./assets/headerimg.jpg" style="border-radius: 30px; height: 500px; width: auto;"alt="Iacovos's face">
         </div>
       </div>
     </section>
@@ -68,11 +156,11 @@
       <div class="container">
         <div class="about-grid">
           <div class="about-card">
-            <h3><span style="color:black;">Why me, you may ask?</span></h3>
+            <h3><span style="color:black; padding-left: 20px;">Why me, you may <span style="padding-left: 20px;"> ask?</span></span></h3>
           </div>
         </div>
         <div class="about-info">
-          <h3 class="sub-heading"><span style="color:black;">About me</span></h3>
+          <h3 class="sub-heading">About me</h3>
           <h1 class="heading"><span style="color:black;"></span>/*Beautiful designs,<br> better experiences*/</span></h1>
           <p class="text">
             //I will help you, to reach your dream website, guaranteeing the best experiance and
@@ -80,7 +168,7 @@
           </p>
           <div class="cta">
             <a href="mailto:iaiacovidesg@gmail.com" class="btn">Contact me</a>
-            <a href="#" onclick='window.open("./assets/Iacovos Iacovides. CV.pdf");return false;'download class="btn secondary-btn"><span style="color: white;">Download my CV</span></a>
+            <a href="#" onclick='window.open("./assets/IacovosIacovidesCV_2024.pdf");return false;'download class="btn secondary-btn"><span style="color: white;">Download my CV</span></a>
             <a href="#" onclick='window.open("./tik-tak-toe/HomePage_Index.html");return false;' class="btn">Kill you boredom and play some Tik-Tak-Toe!</a>
           </div>
         </div>
@@ -128,7 +216,7 @@
                   <circle cx="75" cy="75" r="68" />
                 </svg>
                 <h2 class="counter">
-                  <span data-target="55">0</span>%
+                  <span data-target="75">0</span>%
                 </h2>
               </div>
               <div class="sk-title">JavaScript</div>
@@ -154,7 +242,7 @@
       <div class="container">
         <div class="services-info">
           <h3 class="sub-heading">My passion</h3>
-          <h1 class="heading">/*Things I do for university that I can do for you as well*/</h1>
+          <h1 class="heading">/*Things I do for university and for my current job that I can do for you as well*/</h1>
           <p class="text">
             //From offering in-depth user research, to helping with design
             and testing, I can help bring your product to life.//
@@ -165,7 +253,7 @@
               <h5>Years</h5>
             </div>
             <div class="ml">
-              <h2 class="number"><span data-target="10">0</span>+</h2>
+              <h2 class="number"><span data-target="15">0</span>+</h2>
               <h5>Projects</h5>
             </div>
             <div class="ml">
@@ -175,7 +263,7 @@
           </div>
           <div class="cta">
             <a href="hire.html" class="btn">Hire me</a>
-            <a href="#" onclick='window.open("./assets/Iacovos Iacovides. CV.pdf");return false;'download class="btn secondary-btn"><span style="color: white;">Download my CV</span></a>
+            <a href="#" onclick='window.open("./assets/IacovosIacovidesCV_2024.pdf");return false;'download class="btn secondary-btn"><span style="color: white;">Download my CV</span></a>
             <a href="#" onclick='window.open("./tik-tak-toe/HomePage_Index.html");return false;' class="btn">Kill you boredom and play some Tik-Tak-Toe!</a>
           </div>
         </div>
@@ -246,86 +334,115 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="portfolio-header">
-          <div class="portfolio-title">
-            <h3 class="sub-heading">Portfolio</h3>
-            <h1 class="heading">/*Latest Projects*/</h3>
+      <section class="portfolio section" id="portfolio">
+        <div class="container">
+          <!-- Header + Filter Buttons -->
+          <div class="portfolio-header">
+            <div class="portfolio-title">
+              <h3 class="sub-heading">Portfolio</h3>
+              <h1 class="heading">/* Latest Projects */</h1>
+            </div>
+          </div>
+          <!-- Gallery -->
+          <div class="portfolio-gallery">
+            <!-- Karpos Zois -->
+            <div class="prt-card">
+              <div class="prt-image">
+                <img src="assets/karposzois.png" alt="Karpos Zois">
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Karpos Zois</h4>
+                    <a href="https://karposzoistest.netlify.app" target="_blank" class="btn link-btn">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Doughnuts Brief -->
+            <div class="prt-card">
+              <div class="prt-image">
+                <img src="assets/port1.png" alt="Doughnuts Brief">
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Doughnuts Brief</h4>
+                    <a href="doughnuts.html" class="btn link-btn">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Edge Tree Surgery Brief -->
+            <div class="prt-card">
+              <div class="prt-image">
+                <img src="assets/port2.png" alt="Edge Tree Surgery Brief">
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Edge Tree Surgery Brief</h4>
+                    <a href="edgetreesurgery.html" class="btn link-btn">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Black Board System -->
+            <div class="prt-card">
+              <div class="prt-image">
+                <img src="assets/port5.png" alt="Black Board System">
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Black Board System</h4>
+                    <a href="blackboard.html" class="btn link-btn">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Instagram Page -->
+            <div class="prt-card">
+              <div class="prt-image">
+                <img src="assets/colorslapped.png" alt="Instagram Page">
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Instagram Page</h4>
+                    <a href="https://www.instagram.com/_colorslapped/" target="_blank" target="_blank" class="btn link-btn">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Web App Development -->
+            <div class="prt-card">
+              <div class="prt-image">
+                <img src="assets/port6.png" alt="Web App Development">
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Web App Development</h4>
+                    <a href="webapp.html" class="btn link-btn">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end .portfolio-gallery -->
+        </div>
+        <!-- Modal & Slider (unchanged) -->
+        <div class="modal">
+          <div class="modal-overlay"></div>
+          <div class="slider-wrap">
+            <div class="prev-btn navigation"><i class="uil uil-angle-left-b"></i></div>
+            <div class="images">
+              <img class="showImage" src="assets/port1.png">
+              <img src="assets/port2.png">
+              <img src="assets/port3.png">
+              <img src="assets/port4.png">
+              <img src="assets/port5.png">
+              <img src="assets/port6.png">
+              <img src="assets/port7.png">
+            </div>
+            <div class="next-btn navigation"><i class="uil uil-angle-right-b"></i></div>
           </div>
         </div>
-        <div class="portfolio-gallery">
-          <div class="mix prt-card inter">
-            <div class="prt-image">
-              <img src="assets/port1.png" alt="">
-              <div>
-                <a href="#" class="prt-icon" style="--i: .15s">
-                  <i class="uil uil-link-h"></i>
-                </a>
-              </div>
-            </div>
-            <div class="prt-desc">
-              <h3><span style="color: black;">Dougnhuts Brief</span></h3>
-              <a href="doughnuts.html" class="btn secondary-btn sm"><span style="color: black;">Read more</span></a>
-            </div>
-          </div>
-          <div class="mix prt-card product">
-            <div class="prt-image">
-              <img src="./assets/port2.png" alt="">
-              <div>
-                <a href="#" class="prt-icon" style="--i: .15s">
-                  <i class="uil uil-link-h"></i>
-                </a>
-              </div>
-            </div>
-            <div class="prt-desc">
-              <h3><span style="color: black;">Edge Tree Surgery Brief</span></h3>
-              <a href="edgetreesurgery.html" class="btn secondary-btn sm"><span style="color: black;">Read more</span></a>
-            </div>
-          </div>
-          <div class="mix prt-card web">
-            <div class="prt-image">
-              <img src="assets/port5.png" alt="">
-              <div>
-                <a href="#" class="prt-icon" style="--i: .15s">
-                  <i class="uil uil-link-h"></i>
-                </a>
-              </div>
-            </div>
-            <div class="prt-desc">
-              <h3><span style="color: black;">Black Board System</span></h3>
-              <a href="blackboard.html" class="btn secondary-btn sm"><span style="color: black;">Read more</span></a>
-            </div>
-          </div>
-          <div class="mix prt-card web">
-            <div class="prt-image">
-              <img src="./assets/port4.png" alt="">
-              <div>
-                <a href="#" class="prt-icon" style="--i: .15s">
-                  <i class="uil uil-link-h"></i>
-                </a>
-              </div>
-            </div>
-            <div class="prt-desc">
-              <h3><span style="color: black;">Instagram Page</span></h3>
-              <a href="instagram.html" class="btn secondary-btn sm"><span style="color: black;">Read more</span></a>
-            </div>
-          </div>
-          <div class="mix prt-card inter">
-            <div class="prt-image">
-              <img src="./assets/port6.png" alt="">
-              <div>
-                <a href="#" class="prt-icon" style="--i: .15s">
-                  <i class="uil uil-link-h"></i>
-                </a>
-              </div>
-            </div>
-            <div class="prt-desc">
-              <h3><span style="color: black;">Web App development</span></h3>
-              <a href="webapp.html" class="btn secondary-btn sm"><span style="color: black;">Read more</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
+      
     </section>
     <section class="contact section" id="contact">
       <img src="./assets/triangle.png" class="shape triangle">
@@ -376,5 +493,24 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="./js/mixitup.min.js"></script>
   <script src="./js/app.js"></script>
+  <script>
+    // Filter buttons logic
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Toggle active class
+    document.querySelector('.filter-btn.active')?.classList.remove('active');
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    // Show/hide cards
+    document.querySelectorAll('.prt-card').forEach(card => {
+      card.style.display = (filter === 'all' || card.dataset.category === filter)
+        ? 'block' : 'none';
+    });
+  });
+});
+// Activate “All” by default
+document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+
+  </script>
 </body>
 </html>
